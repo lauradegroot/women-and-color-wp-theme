@@ -1,26 +1,44 @@
 * { box-sizing: border-box; }
-body { min-width: 320px;}
+
+body {
+  min-width: 320px;
+  font-family: "neuzeit-grotesk", sans-serif;
+  &.mobile-menu-open { overflow: hidden; }
+}
 
 .mobile-menu-tags {
   position: fixed;
   background: white;
   width: 100%;
+  height: 100%;
   left: -650px;
   -webkit-transition: .5s ease-in-out;
   -moz-transition: .5s ease-in-out;
   -o-transition: .5s ease-in-out;
   transition: .5s ease-in-out;
+  .mobile-menu-tags-wrap {
+    height: 100%;
+    overflow-y: scroll;
+    position: absolute;
+    width: 100%;
+  }
   &.menu-open { left:0; }
   .filter {
     color: $grey;
     font-size: 24px;
-    padding-bottom: 30px;
+    padding: 12px 15px 30px 15px;
   }
-  p {
+  p:not(.filter) {
     color: $purple;
     font-size: 18px;
     text-transform: capitalize;
     padding: 12px 15px;
+    cursor: pointer;
+    &:hover, &.current-tag {
+      color: $dark-purple;
+      border-left: 5px solid $dark-purple;
+      padding: 12px 10px;
+    }
   }
 }
 .content-area {
@@ -115,7 +133,7 @@ body { min-width: 320px;}
 }
 
 .speaker-twitter {
-  margin-top: 16px;
+  margin-top: 20px;
   display: none;
   font-size: 14px;
   background-image: url("images/twitter.svg");
@@ -153,10 +171,9 @@ body { min-width: 320px;}
       border: 1px solid $light-purple;
       border-radius: 4px;
       width: 300px;
-      height: 533px;
       text-align: center;
       float: left;
-      padding: 0;
+      padding: 0px 10px 40px 10px;
       margin: 10px;
     }
   }
@@ -189,6 +206,8 @@ body { min-width: 320px;}
     white-space: normal;
     margin: 25px auto;
     max-width: 90%;
+    max-height: none;
+    overflow: auto;
     a {
       background: #fff;
       border: 1px solid $light-purple;

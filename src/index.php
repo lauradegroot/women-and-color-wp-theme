@@ -35,10 +35,12 @@
                 </div>
               </div>
             </div>
-            <div class="speaker-contact-form">
-              <h3 class="contact-title">Contact <?php echo get_post_meta($post->ID, 'first_name', true); ?></h3>
-              <?php the_content(); ?>
-            </div>
+            <?php if ( is_single() ) { ?>
+              <div class="speaker-contact-form">
+                <h3 class="contact-title">Contact <?php echo get_post_meta($post->ID, 'first_name', true); ?></h3>
+                <?php the_content(); ?>
+              </div>
+            <?php } ?>
             <?php wp_link_pages(); ?>
           </article>
         <?php endwhile;
@@ -56,5 +58,5 @@
       </main>
       <?php womenandcolor_post_navigation(); ?>
     </section>
-    </div>
+  </div>
 <?php get_footer(); ?>

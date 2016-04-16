@@ -1,4 +1,5 @@
 @include media-above($break-medium) {
+  body.mobile-menu-open { overflow: auto; }
   .content-area {
     padding: 0px;
     @include media-between($break-medium, $break-large) {
@@ -117,6 +118,7 @@
     font-size: 36px;
   }
   .site-content {
+    padding:0 40px;
     .speaker-info {
       border: 1px solid $light-purple;
       border-radius: 4px;
@@ -124,7 +126,7 @@
       height: 533px;
       text-align: center;
       float: left;
-      padding: 0;
+      padding: 0px 10px 40px 10px;
       margin: 10px;
     }
   }
@@ -157,6 +159,8 @@
     white-space: normal;
     margin: 25px auto;
     max-width: 90%;
+    max-height: 70px;
+    overflow: hidden;
     a {
       background: #fff;
       border: 1px solid $light-purple;
@@ -173,6 +177,12 @@
   }
   .speaker-contact a {
     display: block;
+    color: #fff;
+    background-color: $dark-purple;
+    width: 165px;
+    margin: 0 auto;
+    height: 42px;
+    border-radius: 4px;
   }
 
   .speaker-twitter {

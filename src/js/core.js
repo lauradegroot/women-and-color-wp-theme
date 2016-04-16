@@ -22,8 +22,23 @@
 
   $('body').on('click', '.nav-icon', function() {
     var mobile_menu = $('.mobile-menu-tags');
+    var body = $('body')
+    var link_wrap= $('.mobile-menu-tags-wrap p')
+
     $(this).toggleClass('open');
     mobile_menu.toggleClass('menu-open');
+    body.toggleClass('mobile-menu-open');
+
+    link_wrap.each(
+      function(i) {
+        var classes = this.classList;
+        for (var i=0,len=classes.length; i<len; i++){
+          if ($('body').hasClass(classes[i])){
+              $(this).addClass('current-tag');
+          }
+        }
+    });
+
   });
 
 }(jQuery));

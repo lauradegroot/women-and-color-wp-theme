@@ -7,6 +7,9 @@
 <title><?php wp_title( '- Women&Color', true, 'right' ); ?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
+<script src="https://use.typekit.net/mnp5beq.js">
+  <script>try{Typekit.load({ async: true });}catch(e){}</script>
+</script>
 <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
@@ -22,7 +25,7 @@
       <?php $tags = get_tags();
       if ($tags) {
         foreach ($tags as $tag) {
-        echo '<p><a href="' . get_tag_link( $tag->term_id ) . '" title="' . sprintf( __( "View all posts in %s" ), $tag->name ) . '" ' . '>' . $tag->name.'</a> </p> ';
+        echo '<p class="tag-' . sprintf($tag->slug)  .'"><a href="' . get_tag_link( $tag->term_id ) . '" title="' . sprintf( __( "View all posts in %s" ), $tag->name ) . '" ' . '>' . $tag->name.'</a> </p> ';
         }
       } ?>
     </div>

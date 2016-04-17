@@ -23,6 +23,9 @@
   <div class="mobile-menu-tags">
     <div class="mobile-menu-tags-wrap">
       <p class="filter">Filter by topic</p>
+      <p class="tag-all">
+        <a href="#">All</a>
+      </p>
       <?php $tags = get_tags();
       if ($tags) {
         foreach ($tags as $tag) {

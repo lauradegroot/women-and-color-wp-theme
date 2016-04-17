@@ -76,6 +76,11 @@ body {
     overflow: auto;
     padding: 20px 0;
     border-top: 1px solid $light-grey;
+    .speaker-name, .speaker-title, .speaker-org {
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
   }
 }
 .speaker-image {
@@ -123,6 +128,9 @@ body {
 .speaker-contact a {
   display: none;
   padding: 8px 14px 8px 15px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .button {
   background: $dark-purple;
@@ -144,25 +152,45 @@ body {
 }
 .speaker-contact-form {
   display: none;
-  .field-input {
-    border: none;
-    border-bottom: 1px solid $light-grey;
-    outline:none;
-    color: $grey;
-    font-size: 18px;
-  }
-  .organizer-name, .organizer-email {
-    width: 50%;
-    float: left;
-    clear: none;
-  }
-  .required { display: none;}
+  float: left;
+  margin-left: 45px;
   .contact-title {
     color: $dark-purple;
     font-size: 36px;
+    margin: 5px 0 20px -3px;
   }
-  ::-webkit-input-placeholder, :-moz-placeholder, ::-moz-placeholder , :-ms-input-placeholder {
+  .send-input {
+    color: #fff;
+    background: $dark-purple;
+    width: 194px;
+    font-size: 18px;
+    border-radius: 4px;
+    line-height: 37px;
+    height: 43px;
+  }
+  input, textarea {
+    display: block;
+    border: none;
+    border-bottom: 1px solid $light-grey;
+    outline: none;
+    margin: 0 0 34px 0;
+    padding-bottom: 7px;
+    width: 100%;
     color: $grey;
+    &.inline-input {
+      display: inline;
+      width: 49%;
+    }
+  }
+  textarea {
+    height: 30px;
+    resize:vertical;
+  }
+  .input-group {
+    color: #000;
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-bottom: 15px;
   }
 }
 .single-post {
@@ -175,6 +203,14 @@ body {
       float: left;
       padding: 0px 10px 40px 10px;
       margin: 10px;
+      height: auto;
+      .speaker-name, .speaker-title, .speaker-org {
+        white-space: inherit;
+        text-overflow: inherit;
+        overflow: auto;
+        max-width: 245px;
+        margin: 0 auto;
+      }
     }
   }
   .speaker-image {
@@ -191,7 +227,7 @@ body {
     padding-left: 0px;
   }
   .speaker-name {
-    font-size: 24px;
+    font-size: 22px;
     line-height: 24px;
   }
   .speaker-title {
@@ -222,8 +258,8 @@ body {
       }
     }
   }
-  .speaker-contact a {
-    display: block;
+  .speaker-contact {
+    display: none;
   }
 
   .speaker-twitter {
@@ -231,7 +267,6 @@ body {
   }
   .speaker-contact-form {
     display: block;
-    float: left;
   }
 }
 
@@ -297,3 +332,10 @@ footer { text-align: center; }
 .alignleft {
   float: left;
 }
+.no-results, .not-found {
+  h1, .entry-content {
+    text-align: center;
+    color: $dark-purple;
+  }
+}
+.bitnami-corner-image-div {display: none!important;}

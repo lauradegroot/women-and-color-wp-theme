@@ -128,6 +128,11 @@
       float: left;
       padding: 0px 10px 40px 10px;
       margin: 10px;
+      p {
+        max-width: 245px;
+        margin: 0 auto;
+      }
+      .speaker-tags { max-height: 70px; }
     }
   }
   .speaker-image {
@@ -144,7 +149,7 @@
     padding-left: 0px;
   }
   .speaker-name {
-    font-size: 24px;
+    font-size: 22px;
     line-height: 24px;
   }
   .speaker-title {
@@ -159,7 +164,6 @@
     white-space: normal;
     margin: 25px auto;
     max-width: 90%;
-    max-height: 70px;
     overflow: hidden;
     a {
       background: #fff;

@@ -7,10 +7,12 @@
     <?php endif; ?>
   </div>
   <div class="speaker-items">
-    <p class="speaker-name">
-      <?php echo get_post_meta($post->ID, 'first_name', true); ?>
-      <?php echo get_post_meta($post->ID, 'last_name', true); ?>
-    </p>
+    <a href="<?php echo get_permalink(); ?>">
+      <p class="speaker-name">
+        <?php echo get_post_meta($post->ID, 'first_name', true); ?>
+        <?php echo get_post_meta($post->ID, 'last_name', true); ?>
+      </p>
+    </a>
     <p class="speaker-title">
       <?php echo get_post_meta($post->ID, 'title', true); ?>
     </p>

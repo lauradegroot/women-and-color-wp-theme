@@ -193,6 +193,21 @@
     display: inline-block;
   }
 
+  .speaker-contact-form {
+    margin-left: 45px;
+    .contact-title {
+      font-size: 36px;
+    }
+    .send-input {
+      font-size: 18px;
+      line-height: 37px;
+      height: 43px;
+    }
+    .input-group {
+      font-size: 14px;
+    }
+  }
+
   .footer-cta {
     padding:75px 30px 50px 30px;
     h3 { font-size: 36px; }
@@ -203,61 +218,15 @@
     }
   }
 
-  // footer { text-align: center; }
-  //
-  // .footer-cta {
-  //   height: 375px;
-  //   background: $light-grey;
-  //   overflow: auto;
-  //   padding:0 30px;
-  //   h3 {
-  //     font-size: 36px;
-  //     margin: 75px 0 20px 0;
-  //   }
-  //   p {
-  //     font-size: 24px;
-  //     color: $dark-grey;
-  //     max-width: 600px;
-  //     margin: 0 auto;
-  //   }
-  //   a {
-  //     font-size: 24px;
-  //     margin-top: 35px;
-  //     padding: 20px 30px;
-  //   }
-  // }
-  //
-  // .footer-info {
-  //   height: 282px;
-  //   background-image: url("images/background.jpg");
-  //   background-position: center center;
-  //   color: #fff;
-  //   overflow: auto;
-  //   padding:0 30px;
-  //   h4 {
-  //     font-size: 24px;
-  //     margin: 60px 0 20px 0;
-  //   }
-  //   p {
-  //     font-size: 18px;
-  //     max-width: 300px;
-  //     margin: 0 auto;
-  //   }
-  // }
-  //
-  // .site-navigation {
-  //   display: none;
-  //   @include media-above($break-medium) {
-  //     display: block !important; // Handles an edge case where user resizes after menu is hidden on smaller screens
-  //   }
-  //   &.active {
-  //     display: block;
-  //   }
-  // }
-  // .alignright {
-  //   float: right;
-  // }
-  // .alignleft {
-  //   float: left;
-  // }
+  .single-post .content-area {
+    .site-main { border-bottom: none; }
+    .speaker-info {
+      border: 1px solid $light-purple;
+      margin: 10px;
+      float: left;
+    }
+    .speaker-contact-form {
+      margin-top: 0px;
+    }
+  }
 }

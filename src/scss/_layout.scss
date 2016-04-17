@@ -5,7 +5,6 @@ body {
   font-family: "neuzeit-grotesk", sans-serif;
   &.mobile-menu-open { overflow: hidden; }
 }
-
 .mobile-menu-tags {
   position: fixed;
   background: white;
@@ -153,7 +152,6 @@ body {
 .speaker-contact-form {
   display: none;
   float: left;
-  margin-left: 45px;
   .contact-title {
     color: $dark-purple;
     font-size: 36px;
@@ -194,15 +192,15 @@ body {
   }
 }
 .single-post {
+  .site-main { border-bottom: 1px solid $light-grey; }
   .site-content {
     .speaker-info {
-      border: 1px solid $light-purple;
+      border: none;
       border-radius: 4px;
       width: 300px;
       text-align: center;
-      float: left;
       padding: 0px 10px 40px 10px;
-      margin: 10px;
+      margin: -40px auto 10px auto;
       height: auto;
       .speaker-name, .speaker-title, .speaker-org {
         white-space: inherit;
@@ -267,6 +265,7 @@ body {
   }
   .speaker-contact-form {
     display: block;
+    margin-top: 30px;
   }
 }
 
@@ -339,3 +338,16 @@ footer { text-align: center; }
   }
 }
 .bitnami-corner-image-div {display: none!important;}
+.nav-next {
+  clear: both;
+  text-align: center;
+  width: 100%;
+  border: 1px solid $light-purple;
+  margin: 0 -10px;
+  border-radius: 4px;
+  padding: 20px 0;
+  a {
+    color: $purple;
+    font-size: 24px;
+  }
+}

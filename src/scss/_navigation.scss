@@ -4,16 +4,16 @@
   @extend %clearfix;
   @extend %spacer-below-3;
 }
-.nav-previous {
-  box-sizing: border-box;
-  float: left;
-  padding-right: spacer(1/2);
-  width: 50%;
-}
 .nav-next {
-  box-sizing: border-box;
-  float: right;
-  padding-left: spacer(1/2);
-  text-align: right;
-  width: 50%;
+  clear: both;
+  text-align: center;
+  width: 100%;
+  border: 1px solid $light-purple;
+  margin: 0 -10px;
+  border-radius: 4px;
+  padding: 20px 0;
+  a {
+    color: $purple;
+    font-size: 24px;
+  }
 }

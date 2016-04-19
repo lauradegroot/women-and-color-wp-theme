@@ -22,6 +22,15 @@ endif;
 <div id="content" class="site-content">
   <section id="primary" class="content-area">
     <main id="main" class="site-main">
+    <p class="current-tag-page">
+    <?php
+      $tag_title = single_tag_title("", false);
+      if ($tag_title) {
+        echo $tag_title;
+      } else {
+        echo 'All Topics';
+      }
+    ?></p>
     <?php if ( have_posts() ) {
       // display posts (all or single)
       while ( have_posts() ) : the_post(); ?>

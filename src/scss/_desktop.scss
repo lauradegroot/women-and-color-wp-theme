@@ -1,6 +1,7 @@
 @include media-above($break-medium) {
   body.mobile-menu-open { overflow: auto; }
   .content-area {
+    margin-top: 40px;
     padding: 0px;
     @include media-between($break-medium, $break-large) {
       @include scut-center-block(650px);
@@ -15,7 +16,7 @@
     }
   }
   .site-header { padding: 0; }
-  .mobile-menu-tags, .nav-icon { display: none; }
+  .mobile-menu-tags, .nav-icon, .current-tag-page { display: none; }
   .main-category-menu {
     display: block;
     width: 90%;
@@ -198,6 +199,7 @@
 
   .speaker-contact-form {
     margin-left: 45px;
+    width: 600px;
     .contact-title {
       font-size: 36px;
     }
@@ -220,7 +222,9 @@
       width: auto;
     }
   }
+}
 
+@include media-above(1000px) {
   .single-post .content-area {
     .site-main { border-bottom: none; }
     .speaker-info {

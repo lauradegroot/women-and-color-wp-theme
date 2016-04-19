@@ -5,12 +5,18 @@ body {
   font-family: "neuzeit-grotesk", sans-serif;
   &.mobile-menu-open { overflow: hidden; }
 }
+
+.wrap-main {
+  overflow: auto;
+  margin-bottom: 50px;
+}
+
 .mobile-menu-tags {
   position: fixed;
   background: white;
   width: 100%;
   height: 100%;
-  left: -650px;
+  left: -720px;
   -webkit-transition: .5s ease-in-out;
   -moz-transition: .5s ease-in-out;
   -o-transition: .5s ease-in-out;
@@ -40,11 +46,18 @@ body {
     }
   }
 }
+
 .content-area {
-  margin-top: 40px;
+  margin-top: 20px;
   padding: 0 20px;
 }
 
+.current-tag-page {
+  color: $dark-purple;
+  font-size: 18px;
+  margin-bottom: 20px;
+  text-transform: capitalize;
+}
 .main-category-menu { display: none; }
 .sub-category-menu.speaker-tags { display: none }
 
@@ -205,6 +218,7 @@ body {
         max-width: 245px;
         margin: 0 auto;
       }
+      .speaker-tags { height: auto; }
     }
   }
   .speaker-image {
@@ -334,3 +348,4 @@ footer { text-align: center; }
   }
 }
 .bitnami-corner-image-div {display: none!important;}
+.wrap-footer { clear: both; }

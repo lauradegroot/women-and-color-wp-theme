@@ -132,7 +132,7 @@
         max-width: 245px;
         margin: 0 auto;
       }
-      .speaker-tags { max-height: 70px; }
+      .speaker-tags { height: 70px; }
     }
   }
   .speaker-image {
@@ -187,6 +187,9 @@
     margin: 0 auto;
     height: 42px;
     border-radius: 4px;
+    padding: 5px 14px 8px 15px;
+    line-height: 31px;
+    overflow: hidden;
   }
 
   .speaker-twitter {

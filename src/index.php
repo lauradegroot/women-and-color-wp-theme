@@ -45,7 +45,7 @@ endif;
       </article>
     <?php } ?>
     </main>
-    <?php womenandcolor_post_navigation(); ?>
+  <?php womenandcolor_post_navigation(); ?>
   </section>
 </div>
 <?php get_footer(); ?>

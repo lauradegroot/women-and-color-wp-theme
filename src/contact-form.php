@@ -7,7 +7,7 @@
     <p class="input-group">Event info</p>
     <input type='text' name='organization' placeholder="Organization" />
     <input type='text' name='location' placeholder="Location" />
-    <input type='text' name='date' placeholder="Date" class="inline-input" />
+    <input type='text' name='date' placeholder="Date" class="inline-input" id="datepicker"/>
     <input type='text' name='time' placeholder="Time" class="inline-input"/>
     <textarea name="info" form="contact-speaker">Additional info</textarea>
     <input type='submit' value='Send Message' class="send-input"/>

@@ -54,6 +54,7 @@ module.exports = {
       // The core chunk is loaded no matter what; put essential scripts that you want loaded by your theme in here
       core: [
         modules+'timeago/jquery.timeago.js' // The modules directory contains packages downloaded via npm
+      , src+'js/pikaday.js'
       , src+'js/responsive-menu.js'
       , src+'js/core.js'
       ]

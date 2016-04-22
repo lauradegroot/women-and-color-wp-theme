@@ -8,9 +8,6 @@
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 <link rel='icon' href='../images/favicon.ico' />
-<script src="https://use.typekit.net/mnp5beq.js">
-  <script>try{Typekit.load({ async: true });}catch(e){}</script>
-</script>
 <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
@@ -21,7 +18,7 @@
     <span></span>
   </div>
   <div class="mobile-menu-tags">
-    <div class="mobile-menu-tags-wrap">
+    <div class="mobile-menu-tags-wrap tags-wrap">
       <p class="filter">Filter by topic</p>
       <p class="tag-all">
         <a href="#">All</a>
@@ -42,13 +39,13 @@
           <h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
         </div>
         <div class="main-category-menu">
-          <div class="topics-wrap">
-            <p><a href="<?php echo esc_url( home_url( '/' ) ); ?>">All Topics</a></p>
-            <p><a href="<?php echo esc_url( home_url( '/topic/product' ) ); ?>">Product</a></p>
-            <p><a href="<?php echo esc_url( home_url( '/topic/design' ) ); ?>">Design</a></p>
-            <p><a href="<?php echo esc_url( home_url( '/topic/web-development' ) ); ?>">Web Development</a></p>
-            <p><a href="<?php echo esc_url( home_url( '/topic/ios-development' ) ); ?>">iOS Development</a></p>
-            <p><a href="<?php echo esc_url( home_url( '/topic/digital-marketing' ) ); ?>">Digital Marketing</a></p>
+          <div class="topics-wrap tags-wrap">
+            <p class="tag-all"><a href="<?php echo esc_url( home_url( '/' ) ); ?>">All Topics</a></p>
+            <p class="tag-product"><a href="<?php echo esc_url( home_url( '/topic/product' ) ); ?>">Product</a></p>
+            <p class="tag-design"><a href="<?php echo esc_url( home_url( '/topic/design' ) ); ?>">Design</a></p>
+            <p class="tag-web-development"><a href="<?php echo esc_url( home_url( '/topic/web-development' ) ); ?>">Web Development</a></p>
+            <p class="tag-ios-development"><a href="<?php echo esc_url( home_url( '/topic/ios-development' ) ); ?>">iOS Development</a></p>
+            <p class="tag-digital-marketing"><a href="<?php echo esc_url( home_url( '/topic/digital-marketing' ) ); ?>">Digital Marketing</a></p>
           </div>
           <div class="more closed">
             More

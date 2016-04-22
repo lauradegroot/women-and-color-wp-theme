@@ -1,19 +1,13 @@
-// ==== CONFIGURATION ==== //
 
-// Set all your configuration variables here!
-
-// Width of the overall site as well as the left and right content columns
 $width-site:    966px;
 $width-left:    650px;
 $width-right:   350px;
 
-// Breakpoints
 $break-small:   480px;
 $break-medium:  720px;
 $break-large:   1045px;
 $break-x-large: 1200px;
 
-// A standard margin
 $spacer:        30px;
 
 $black:         #212121;
@@ -23,6 +17,7 @@ $light-purple:  #C5CAE9;
 $dark-purple:   #3F51B5;
 $dark-grey:     #616161;
 $light-grey:    #F5F5F5;
+$med-purple:    #9FA8DA;
 
 // A modest palette; see `_library.scss` for the color() function
 $_color: (

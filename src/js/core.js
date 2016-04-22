@@ -1,16 +1,10 @@
-// ==== CORE ==== //
-
-// A simple wrapper for all your custom jQuery; everything in this file will be run on every page
 ;(function($){
   $(function(){
-    // Example integration: JavaScript-based human-readable timestamps
-    if ($.timeago) {
-      $('time').timeago();
-    }
+    var picker = new Pikaday({ field: document.getElementById('datepicker') });
   });
 
   $('body').on('click', '.more', function() {
-    var menu_height = $('.sub-category-menu-inner').outerHeight()
+    var menu_height = $('.sub-category-menu-inner').outerHeight();
     if ($(this).hasClass('closed')) {
       $(this).removeClass('closed').addClass('open');
       $('.sub-category-menu').css('height', menu_height);
@@ -21,14 +15,17 @@
   });
 
   $('body').on('click', '.nav-icon', function() {
-    var mobile_menu = $('.mobile-menu-tags');
     var body = $('body');
-    var link_wrap= $('.mobile-menu-tags-wrap p');
-    var tagAll = $('.tag-all');
-
+    var mobile_menu = $('.mobile-menu-tags');
     $(this).toggleClass('open');
     mobile_menu.toggleClass('menu-open');
     body.toggleClass('mobile-menu-open');
+  });
+
+  var setActiveTags = function () {
+    var body = $('body');
+    var link_wrap= $('.tags-wrap p');
+    var tagAll = $('.tag-all');
     if (body.hasClass("home")) {
       tagAll.addClass('current-tag');
     } else {
@@ -42,6 +39,7 @@
           }
       });
     }
-  });
+  };
 
+  setActiveTags();
 }(jQuery));

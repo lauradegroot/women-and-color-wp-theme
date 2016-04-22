@@ -31,14 +31,22 @@
     position: relative;
     .topics-wrap {
       width: 95%;
-      height: 25px;
+      height: 40px;
       overflow: hidden;
     }
     p {
-      font-weight: bold;
+      font-weight: 700;
       display: inline-block;
-      padding-right: 40px;
-      a { color: $purple; }
+      margin-right: 40px;
+      padding-bottom: 12px;
+      &.current-tag {
+        a { color: $dark-purple; }
+        border-bottom: 4px solid $dark-purple;
+      }
+      a {
+        color: $med-purple;
+        &:hover { color: $dark-purple; }
+      }
     }
     .more {
       position: absolute;
@@ -90,8 +98,7 @@
     overflow: hidden;
     display: block;
     background: #F3F4FA;
-    -webkit-transition: height 0.5s;
-    transition: height 0.5s;
+    @include transition(height .5s);
     margin: 0;
     max-width: none;
     .sub-category-menu-inner {
@@ -175,22 +182,25 @@
       text-transform: lowercase;
       padding: 6px 8px;
       margin: 4px 2px;
-      &:not(:last-of-type):after {
-        content: "";
-      }
+      @include transition(background .1s ease-in-out);
+      &:hover { background: $light-purple; }
+      &:not(:last-of-type):after { content: ""; }
     }
   }
   .speaker-contact a {
-    display: block;
+    display: inline;
     color: #fff;
-    background-color: $dark-purple;
-    width: 165px;
+    background: $dark-purple;
+    min-width: 165px;
     margin: 0 auto;
-    height: 42px;
     border-radius: 4px;
-    padding: 5px 14px 8px 15px;
+    padding: 10px 20px 11px 20px;
     line-height: 31px;
     overflow: hidden;
+    @include transition(.1s background ease-in-out);
+    &:hover {
+      background: #303F9F;
+    }
   }
 
   .speaker-twitter {

@@ -1,22 +1,4 @@
-<?php
-
-// send emails pls
-if($_POST):
-  print_r($_POST);
-  $to      = 'laurardegroot@gmail.com';
-  $subject = 'test';
-  $message = 'hello';
-  $headers = 'From: webmaster@example.com' . "\r\n" .
-    'Reply-To: webmaster@example.com' . "\r\n" .
-    'X-Mailer: PHP/' . phpversion();
-
-  $email = mail($to, $subject, $message, $headers);
-  print_r($email);
-  print_r(eroor_get_last());
-  exit();
-endif;
-
-?>
+<?php include_once "email.php"; ?>
 
 <?php get_header(); ?>
 <div id="content" class="site-content">
@@ -57,4 +39,29 @@ endif;
   <?php womenandcolor_post_navigation(); ?>
   </section>
 </div>
+<script>
+;(function($) {
+  $('.send-input').on('click', function(event) {
+    event.preventDefault();
+    var form = $('#contact-speaker');
+    if (form.length) {
+      $.ajax({
+        type: "POST",
+        url: form.attr('action'),
+        data: form.serialize(),
+        success: function(data) {
+          var res = data.responseText;
+          if (res === 'bail') {
+            console.log('Please fill out the required fields!');
+          } else if (res === '1') {
+            console.log('Success!');
+          } else {
+            console.log('error!');
+          }
+        }
+      });
+    }
+  });
+}(jQuery));
+</script>
 <?php get_footer(); ?>

@@ -1,6 +1,7 @@
 <div class="speaker-contact-form">
   <h3 class="contact-title">Contact <?php echo get_post_meta($post->ID, 'first_name', true); ?></h3>
-  <form method='post' id="contact-speaker">
+  <form method='post' action='<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>' id="contact-speaker">
+    <input type="hidden" name="id" value="<?php echo $post->ID ?>" />
     <p class="input-group">Your info</p>
     <input type='text' name='name' placeholder="Name" class="inline-input"/>
     <input type='text' name='email' placeholder="Email" class="inline-input"/>

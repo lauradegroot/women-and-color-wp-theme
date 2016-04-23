@@ -1,7 +1,7 @@
 ;(function($){
   $(function(){
     var picker = new Pikaday({ field: document.getElementById('datepicker') });
-    $(".time-input").timePicker();
+    $(".time-input").timePicker({ show24Hours: false });
 
     $('body').on('click', '.more', function() {
       var menuHeight = $('.sub-category-menu-inner').outerHeight();

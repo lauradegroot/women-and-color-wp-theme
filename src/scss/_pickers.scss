@@ -222,9 +222,11 @@ div.time-picker {
   width:4em; /* needed for IE */
   overflow: auto;
   background: #fff;
-  border: 1px solid #aaa;
+  border: 1px solid #ccc;
   z-index: 99;
   margin: 0;
+  box-shadow: 0 5px 15px -5px rgba(0,0,0,.5);
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 div.time-picker-12hours {
   width:6em; /* needed for IE */
@@ -240,6 +242,7 @@ div.time-picker li {
   height: 20px;
   padding: 4px 3px;
   font-size: 12px;
+  text-transform: lowercase;
 }
 div.time-picker li.selected {
   background: #3f51b5;

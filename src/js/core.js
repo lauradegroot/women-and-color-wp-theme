@@ -37,6 +37,9 @@
                 .text('Please fill out the required fields')
                 .show()
                 .attr('class', 'error');
+              form
+                .find('[name="name"], [name="email"], [name="organization"]')
+                .css('border-bottom-color', 'red');
             } else if (res === 'success') {
               form.hide();
               message

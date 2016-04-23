@@ -20,7 +20,7 @@ if($_POST):
   $email = wp_mail($to, $subject, $message);
   if ($email) {
     print_r('success');
+    exit();
   }
-  // print_r(eroor_get_last());
   exit();
 endif;

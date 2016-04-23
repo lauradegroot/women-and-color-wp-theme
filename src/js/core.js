@@ -24,22 +24,23 @@
     $('.send-input').on('click', function(event) {
       event.preventDefault();
       var form = $('#contact-speaker');
-      var message = $('.ajax-email-message');
+      var message = $('#ajax-email-message');
       if (form.length) {
         $.ajax({
           type: "POST",
           url: form.attr('action'),
           data: form.serialize(),
-          success: function(data) {
-            if (data === 'bail') {
+          complete: function(data) {
+            var res = data.responseText
+            if (res === 'bail') {
               message
                 .text('Please fill out the required fields!')
                 .show()
                 .attr('class', 'error');
-            } else if (data === 'success') {
+            } else if (res === 'success') {
               form.hide();
               message
-                .text('Success!')
+                .text('Email sent!')
                 .show()
                 .attr('class', 'success');
             } else {

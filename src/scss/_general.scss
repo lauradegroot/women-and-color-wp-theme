@@ -40,7 +40,7 @@ img {
 }
 p { margin: 0; }
 
-.ajax-email-message {
+#ajax-email-message {
   display: none;
   border: 1px solid #333;
   background: #eee;
@@ -52,6 +52,7 @@ p { margin: 0; }
   }
 
   &.success {
-
+    border-color: #693;
+    background: #EFFFED;
   }
 }

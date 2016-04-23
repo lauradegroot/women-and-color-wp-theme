@@ -34,13 +34,13 @@
             var res = data.responseText
             if (res === 'bail') {
               message
-                .text('Please fill out the required fields!')
+                .text('Please fill out the required fields')
                 .show()
                 .attr('class', 'error');
             } else if (res === 'success') {
               form.hide();
               message
-                .text('Email sent!')
+                .text('Your message has been sent, thank you!')
                 .show()
                 .attr('class', 'success');
             } else {

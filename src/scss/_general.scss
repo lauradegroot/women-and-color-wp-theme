@@ -42,17 +42,8 @@ p { margin: 0; }
 
 #ajax-email-message {
   display: none;
-  border: 1px solid #333;
-  background: #eee;
-  padding: 10px;
 
   &.error {
-    border-color: #EABFBF;
-    background: #F4DFDF;
-  }
-
-  &.success {
-    border-color: #693;
-    background: #EFFFED;
+    color: #F36363;
   }
 }

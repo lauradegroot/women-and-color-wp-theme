@@ -8,7 +8,7 @@ if($_POST):
   endif;
   $to      = "laurardegroot@gmail.com"; // get_post_meta($_POST["email"], 'last_name', true)
   $subject = "Someone sent you a message from Women&Color";
-  $message = "Hi " . get_post_meta($_POST["id"], 'first_name', true) . " " . get_post_meta($_POST["id"], 'last_name', true) . "\n\n";
+  $message = "Hi " . get_post_meta($_POST["id"], 'first_name', true) . "\n\n";
   $message .= "Here’s the details of the message sent to you:\n\n";
   $message .= "Name: " . $_POST["name"] . "\n";
   $message .= "Email: " . $_POST["email"] . "\n";

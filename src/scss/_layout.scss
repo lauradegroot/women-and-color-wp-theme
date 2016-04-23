@@ -144,22 +144,28 @@ body {
   border-radius: 4px;
   padding: 8px 14px 8px 15px;
   display: inline-block;
-  color: #fff
+  color: #fff;
+  @include transition(.1s background ease-in-out);
+  &:hover {
+    background: #303F9F;
+  }
 }
 
 .speaker-twitter {
   margin-top: 20px;
   display: none;
   font-size: 14px;
-  background-image: url("images/twitter.svg");
+  background-image: url("images/twitter.png");
   background-repeat: no-repeat;
   background-position: 0px 3px;
+  background-size: 16px;
   padding-left: 20px;
   a {
     color: $dark-grey;
     @include transition( color 0.1 ease-in-out);
   }
   &:hover {
+    background-position: 0 -20px;
     a { color: $grey; }
   }
 }
@@ -180,6 +186,10 @@ body {
     border-radius: 4px;
     line-height: 37px;
     height: 43px;
+    @include transition(.1s background ease-in-out);
+    &:hover {
+      background: #303F9F;
+    }
   }
   input, textarea {
     display: block;

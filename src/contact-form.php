@@ -13,4 +13,5 @@
     <textarea name="info" form="contact-speaker" placeholder="Additional info"></textarea>
     <input type='submit' value='Send Message' class="send-input"/>
   </form>
+  <div class="ajax-email-message"></div>
 </div>

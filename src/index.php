@@ -39,29 +39,4 @@
   <?php womenandcolor_post_navigation(); ?>
   </section>
 </div>
-<script>
-;(function($) {
-  $('.send-input').on('click', function(event) {
-    event.preventDefault();
-    var form = $('#contact-speaker');
-    if (form.length) {
-      $.ajax({
-        type: "POST",
-        url: form.attr('action'),
-        data: form.serialize(),
-        success: function(data) {
-          var res = data.responseText;
-          if (res === 'bail') {
-            console.log('Please fill out the required fields!');
-          } else if (res === '1') {
-            console.log('Success!');
-          } else {
-            console.log('error!');
-          }
-        }
-      });
-    }
-  });
-}(jQuery));
-</script>
 <?php get_footer(); ?>

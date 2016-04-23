@@ -44,5 +44,14 @@ p { margin: 0; }
   display: none;
   border: 1px solid #333;
   background: #eee;
-  padding: 10px 5px;
+  padding: 10px;
+
+  &.error {
+    border-color: #EABFBF;
+    background: #F4DFDF;
+  }
+
+  &.success {
+
+  }
 }

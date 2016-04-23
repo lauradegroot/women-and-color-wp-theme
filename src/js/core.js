@@ -4,19 +4,19 @@
     $(".time-input").timePicker();
 
     $('body').on('click', '.more', function() {
-      var menu_height = $('.sub-category-menu-inner').outerHeight();
+      var menuHeight = $('.sub-category-menu-inner').outerHeight();
       if ($(this).hasClass('closed')) {
         $(this).removeClass('closed').addClass('open');
-        $('.sub-category-menu').css('height', menu_height);
+        $('.sub-category-menu').css('height', menuHeight);
       } else {
         $(this).removeClass('open').addClass('closed');
         $('.sub-category-menu').css('height', 0);
       }
     }).on('click', '.nav-icon', function() {
       var body = $('body');
-      var mobile_menu = $('.mobile-menu-tags');
+      var mobileMenu = $('.mobile-menu-tags');
       $(this).toggleClass('open');
-      mobile_menu.toggleClass('menu-open');
+      mobileMenu.toggleClass('menu-open');
       body.toggleClass('mobile-menu-open');
     });
 
@@ -31,13 +31,22 @@
           url: form.attr('action'),
           data: form.serialize(),
           success: function(data) {
-            var res = data.responseText;
-            if (res === 'bail') {
-              message.text('Please fill out the required fields!').show();
-            } else if (res === '1') {
-              message.text('Success!').show();
+            if (data === 'bail') {
+              message
+                .text('Please fill out the required fields!')
+                .show()
+                .attr('class', 'error');
+            } else if (data === 'success') {
+              form.hide();
+              message
+                .text('Success!')
+                .show()
+                .attr('class', 'success');
             } else {
-              message.text('error!').show();
+              message
+                .text('error!')
+                .show()
+                .attr('class', 'error');
             }
           }
         });
@@ -46,16 +55,16 @@
 
     var setActiveTags = function () {
       var body = $('body');
-      var link_wrap= $('.tags-wrap p');
+      var linkWrap= $('.tags-wrap p');
       var tagAll = $('.tag-all');
       if (body.hasClass("home")) {
         tagAll.addClass('current-tag');
       } else {
-        link_wrap.each(
+        linkWrap.each(
           function(i) {
             var classes = this.classList;
-            for (var i=0,len=classes.length; i<len; i++){
-              if ($('body').hasClass(classes[i])){
+            for (var j=0,len=classes.length; j<len; j++){
+              if ($('body').hasClass(classes[j])){
                   $(this).addClass('current-tag');
               }
             }

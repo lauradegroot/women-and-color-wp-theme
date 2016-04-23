@@ -18,7 +18,9 @@ if($_POST):
   $message .= "Time: " . $_POST["time"] . "\n";
   $message .= "Additional information: " . $_POST["info"] . "\n";
   $email = wp_mail($to, $subject, $message);
-  print_r($email);
-  print_r(eroor_get_last());
+  if ($email) {
+    print_r('success');
+  }
+  // print_r(eroor_get_last());
   exit();
 endif;

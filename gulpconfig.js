@@ -55,6 +55,7 @@ module.exports = {
       core: [
         modules+'timeago/jquery.timeago.js' // The modules directory contains packages downloaded via npm
       , src+'js/pikaday.js'
+      , src+'js/timepicker.js'
       , src+'js/responsive-menu.js'
       , src+'js/core.js'
       ]

@@ -1,6 +1,7 @@
 ;(function($){
   $(function(){
     var picker = new Pikaday({ field: document.getElementById('datepicker') });
+    $(".time-input").timePicker();
 
     $('body').on('click', '.more', function() {
       var menu_height = $('.sub-category-menu-inner').outerHeight();

@@ -32,11 +32,11 @@
           success: function(data) {
             var res = data.responseText;
             if (res === 'bail') {
-              message.text('Please fill out the required fields!');
+              message.text('Please fill out the required fields!').show();
             } else if (res === '1') {
-              message.text('Success!');
+              message.text('Success!').show();
             } else {
-              message.text('error!');
+              message.text('error!').show();
             }
           }
         });

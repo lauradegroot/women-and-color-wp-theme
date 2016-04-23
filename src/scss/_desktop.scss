@@ -10,9 +10,12 @@
       @include scut-center-block($width-site);
     }
   }
-  .single-post .content-area {
-    @include media-above($break-medium) {
-      @include scut-center-block(1020px);
+  .single-post {
+    .site-main { border-bottom: none; }
+    .content-area {
+      @include media-above($break-medium) {
+        @include scut-center-block(1020px);
+      }
     }
   }
   .site-header { padding: 0; }
@@ -23,12 +26,13 @@
     max-width: 1020px;
     margin: 0 auto;
     background: #fff;
-    height: 68px;
+    height: 66px;
     padding: 28px 50px 0 50px;
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
     font-size: 16px;
     position: relative;
+    overflow: hidden;
     .topics-wrap {
       width: 95%;
       height: 40px;
@@ -209,7 +213,7 @@
 
   .speaker-contact-form {
     margin-left: 45px;
-    width: 600px;
+    width: 90%;
     .contact-title {
       font-size: 36px;
     }
@@ -234,9 +238,8 @@
   }
 }
 
-@include media-above(1000px) {
+@include media-above(1041px) {
   .single-post .content-area {
-    .site-main { border-bottom: none; }
     .speaker-info {
       border: 1px solid $light-purple;
       margin: 10px;
@@ -244,6 +247,7 @@
     }
     .speaker-contact-form {
       margin-top: 0px;
+      width: 600px;
     }
   }
 }

@@ -166,6 +166,7 @@ body {
 .speaker-contact-form {
   display: none;
   float: left;
+  width: 100%;
   .contact-title {
     color: $dark-purple;
     font-size: 36px;
@@ -188,7 +189,7 @@ body {
     margin: 0 0 34px 0;
     padding-bottom: 7px;
     width: 100%;
-    color: $grey;
+    color: #000;
     &.inline-input {
       display: inline;
       width: 49%;
@@ -216,6 +217,7 @@ body {
       padding: 0px 10px 40px 10px;
       margin: -40px auto 10px auto;
       height: auto;
+      float: none;
       .speaker-name, .speaker-title, .speaker-org {
         white-space: inherit;
         text-overflow: inherit;
@@ -304,14 +306,12 @@ footer { text-align: center; }
   }
   p {
     font-size: 18px;
-    font-weight: 300;
     color: $dark-grey;
     max-width: 600px;
     margin: 0 auto;
   }
   a {
     font-size: 18px;
-    font-weight: 300;
     margin-top: 35px;
     padding: 20px 30px;
     width: 90%;

@@ -84,7 +84,7 @@ body {
 }
 .site-content {
   .speaker-info {
-    overflow: auto;
+    overflow: hidden;
     padding: 20px 0;
     border-top: 1px solid $light-grey;
     .speaker-name, .speaker-title, .speaker-org {
@@ -312,25 +312,26 @@ footer { text-align: center; }
   h3 {
     font-size: 24px;
     font-weight: 700;
-    margin: 0 0 20px 0;
+    margin:0 0 10px 0;
   }
   p {
     font-size: 18px;
     color: $dark-grey;
     max-width: 600px;
     margin: 0 auto;
+    font-weight: 300;
   }
   a {
     font-size: 18px;
     margin-top: 35px;
-    padding: 20px 30px;
+    padding: 20px 40px;
     width: 90%;
   }
 }
 
 .footer-info {
   height: 282px;
-  background-image: url("images/background.jpg");
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("images/background.jpg");
   background-position: center center;
   color: #fff;
   overflow: auto;
@@ -338,13 +339,18 @@ footer { text-align: center; }
   h4 {
     font-size: 24px;
     font-weight: 700;
-    margin: 60px 0 20px 0;
+    margin: 60px 0 10px 0;
   }
   p {
     font-size: 18px;
     font-weight: 300;
     max-width: 300px;
     margin: 0 auto;
+  }
+  .follow {
+    display:inline-block;
+    margin-top: 10px;
+    font-weight: 700;
   }
 }
 

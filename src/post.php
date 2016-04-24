@@ -9,7 +9,7 @@
   <div class="speaker-items">
     <a href="<?php echo get_permalink(); ?>">
       <p class="speaker-name">
-        <?php echo get_post_meta($post->ID, 'first_name', true); ?>
+        <span class="wrap-first-name"><?php echo get_post_meta($post->ID, 'first_name', true); ?></span>
         <?php echo get_post_meta($post->ID, 'last_name', true); ?>
       </p>
     </a>

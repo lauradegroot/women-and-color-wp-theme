@@ -25,7 +25,7 @@
       event.preventDefault();
       var form = $('#contact-speaker');
       var message = $('#ajax-email-message');
-      var speaker_name = $('.speaker-name').text()
+      var speaker_name = $('.wrap-first-name').text()
       if (form.length) {
         $.ajax({
           type: "POST",

@@ -1,7 +1,7 @@
 @include media-above($break-medium) {
   body.mobile-menu-open { overflow: auto; }
   .content-area {
-    margin-top: 40px;
+    margin-top: 20px;
     padding: 0px;
     @include media-between($break-medium, $break-large) {
       @include scut-center-block(650px);
@@ -39,10 +39,11 @@
       overflow: hidden;
     }
     p {
-      font-weight: 700;
+      font-weight: 400;
       display: inline-block;
-      margin-right: 46px;
-      padding-bottom: 11px;
+      margin-right: 47px;
+      padding-bottom: 8px;
+      font-size: 18px;
       &.current-tag {
         a { color: $dark-purple; }
         border-bottom: 4px solid $dark-purple;
@@ -56,10 +57,17 @@
       position: absolute;
       right: 54px;
       top: 28px;
-      font-weight: bold;
+      font-weight: 400;
       cursor: pointer;
       color: #9fa8da;
-      padding-bottom: 11px;
+      padding-bottom: 8px;
+      font-size: 18px;
+      @include transition(0.1s color ease-in-out);
+      &:hover {
+        color: $dark-purple;
+        &.open .triangle{ border-bottom-color: $dark-purple; }
+        &.closed .triangle { border-top-color: $dark-purple; }
+      }
       .triangle {
         position: relative;
         width:0;
@@ -68,6 +76,7 @@
         border-radius: 23px;
         border-right: 8px solid transparent;
         border-left: 8px solid transparent;
+        @include transition(0.1s border-top-color ease-in-out, 0.1s border-bottom-color ease-in-out);
         .empty {
           position: absolute;
           width: 0;
@@ -125,6 +134,7 @@
   }
   .site-title {
     font-size: 72px;
+    margin-bottom: 0.2em;
   }
   .site-description {
     font-size: 36px;

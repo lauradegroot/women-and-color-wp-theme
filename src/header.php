@@ -4,7 +4,8 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title><?php wp_title( '- Women&Color', true, 'right' ); ?></title>
+<title>Women&amp;Color</title>
+<meta name="description" content="Find talented women and people of color to speak at your tech-related event in Toronto" />
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 <link rel='icon' href='favicon.ico' />
@@ -41,8 +42,7 @@
         <div class="main-category-menu">
           <div class="topics-wrap tags-wrap">
             <p class="tag-all"><a href="<?php echo esc_url( home_url( '/' ) ); ?>">All Topics</a></p>
-            <p class="tag-product"><a href="<?php echo esc_url( home_url( '/topic/product' ) ); ?>">Product</a></p>
-            <p class="tag-design"><a href="<?php echo esc_url( home_url( '/topic/design' ) ); ?>">Design</a></p>
+            <p class="tag-product-design"><a href="<?php echo esc_url( home_url( '/topic/product-design' ) ); ?>">Product Design</a></p>
             <p class="tag-web-development"><a href="<?php echo esc_url( home_url( '/topic/web-development' ) ); ?>">Web Development</a></p>
             <p class="tag-ios-development"><a href="<?php echo esc_url( home_url( '/topic/ios-development' ) ); ?>">iOS Development</a></p>
             <p class="tag-digital-marketing"><a href="<?php echo esc_url( home_url( '/topic/digital-marketing' ) ); ?>">Digital Marketing</a></p>

@@ -7,7 +7,7 @@ if ( !function_exists( 'womenandcolor_post_navigation' ) ) : function womenandco
     <?php if ( get_previous_posts_link() ) { ?>
     <?php } if ( get_next_posts_link() ) { ?>
       <div class="nav-next next-page">
-        <?php next_posts_link( __( 'Show More Speakers', 'womenandcolor' ) ); ?>
+        <?php next_posts_link( __( 'Show more speakers', 'womenandcolor' ) ); ?>
       </div>
     <?php } ?>
     </div>

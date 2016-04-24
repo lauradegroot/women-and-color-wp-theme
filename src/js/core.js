@@ -39,7 +39,7 @@
                 .attr('class', 'error');
               form
                 .find('[name="name"], [name="email"], [name="organization"]')
-                .css('border-bottom-color', 'red');
+                .css('border-bottom-color', '#F36363');
             } else if (res === 'success') {
               form.hide();
               message

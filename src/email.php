@@ -17,6 +17,7 @@ if($_POST):
   $message .= "Date: " . $_POST["date"] . "\n";
   $message .= "Time: " . $_POST["time"] . "\n";
   $message .= "Additional information: " . $_POST["info"] . "\n";
+  $message .= get_post_meta($_POST["id"], 'email', true);
   $email = wp_mail($to, $subject, $message);
   if ($email) {
     print_r('success');

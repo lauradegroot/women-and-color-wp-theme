@@ -80,7 +80,7 @@
     setActiveTags();
 
     var next = function (page) {
-      var path = window.location.pathname.replace(/page\/\d\//, '');
+      var path = window.location.pathname.replace(/page\/[0-9]+\//, '');
       path = (path !== '/') ? path : '';
       return path + '/page/' + page + '/?partial=true';
     }

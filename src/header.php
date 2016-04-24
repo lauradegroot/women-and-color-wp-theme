@@ -8,7 +8,7 @@
 <meta name="description" content="Find talented women and people of color to speak at your tech-related event in Toronto" />
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
-<link rel='icon' href='favicon.ico' />
+<link rel="icon" href="<?php echo get_template_directory_uri(); ?>/images/favicon.ico" />
 <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>

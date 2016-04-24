@@ -11,7 +11,7 @@
   background: #fff;
   @include transition(background .1s ease-in-out);
   &:hover {
-    background: $light-purple;
+    background: #E8EAF6;
   }
   a {
     color: $purple;

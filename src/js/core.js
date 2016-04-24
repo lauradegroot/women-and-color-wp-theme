@@ -25,6 +25,7 @@
       event.preventDefault();
       var form = $('#contact-speaker');
       var message = $('#ajax-email-message');
+      var speaker_name = $('.speaker-name').text()
       if (form.length) {
         $.ajax({
           type: "POST",
@@ -43,7 +44,7 @@
             } else if (res === 'success') {
               form.hide();
               message
-                .text('Your message has been sent, thank you!')
+                .text('Thanks! Your message was successfully sent to '+speaker_name+'.')
                 .show()
                 .attr('class', 'success');
             } else {

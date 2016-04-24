@@ -279,7 +279,7 @@ body {
       padding: 6px 8px;
       margin: 4px 2px;
       @include transition(background .1s ease-in-out);
-      &:hover { background: $light-purple; }
+      &:hover { background: #E8EAF6; }
       &:not(:last-of-type):after {
         content: "";
       }

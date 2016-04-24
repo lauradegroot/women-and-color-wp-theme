@@ -78,5 +78,21 @@
 
     setActiveTags();
 
+    // ajax "show more"
+    if (window.location.pathname === '/' ) {
+      var link = $(".next-page a");
+      link.data("page", "2");
+      link.on("click", function(event) {
+        event.preventDefault();
+        var clicked = $(this);
+        var page = parseInt(clicked.data("page"));
+        $.get('/page/' + page + '/?partial=true', function(data) {
+          var html = data.replace('<head/>','');
+          $('.articles').append(html);
+          clicked.data("page", page+1);
+        });
+      });
+    }
+
   });
 }(jQuery));

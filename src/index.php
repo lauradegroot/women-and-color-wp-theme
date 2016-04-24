@@ -1,4 +1,7 @@
-<?php include_once "email.php"; ?>
+<?php
+include_once "partial.php";
+include_once "email.php";
+?>
 
 <?php get_header(); ?>
 <div id="content" class="site-content">
@@ -13,6 +16,7 @@
         echo 'All Topics';
       }
     ?></p>
+    <div class="articles">
     <?php if ( have_posts() ) {
       // display posts (all or single)
       while ( have_posts() ) : the_post(); ?>
@@ -24,7 +28,8 @@
           <?php } ?>
           <?php wp_link_pages(); ?>
         </article>
-      <?php endwhile;
+      <?php endwhile; ?>
+    </div><?php
     } else { ?>
       <article id="post-0" class="post no-results not-found">
         <header class="entry-header">

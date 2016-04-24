@@ -203,12 +203,6 @@ body {
     &.inline-input {
       display: inline;
       width: 49%;
-
-      &[name="name"]::before,
-      &[name="email"]::before,
-      &[name="organization"]::before {
-        content: "*";
-      }
     }
   }
   textarea {

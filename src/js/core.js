@@ -79,6 +79,10 @@
 
     setActiveTags();
 
+    var next = function (page) {
+      return '/page/' + page + '/?partial=true';
+    }
+
     // ajax "show more"
     if (window.location.pathname === '/' ) {
       var link = $(".next-page a");
@@ -87,10 +91,14 @@
         event.preventDefault();
         var clicked = $(this);
         var page = parseInt(clicked.data("page"));
-        $.get('/page/' + page + '/?partial=true', function(data) {
+        clicked.css('pointer-events', 'none');
+        $.get(next(page), function(data) {
           var html = data.replace('<head/>','');
           $('.articles').append(html);
-          clicked.data("page", page+1);
+          clicked.data("page", page+1).css('pointer-events', 'auto');
+          $.get(next(page+1)).fail(function() {
+            clicked.parent().hide();
+          });
         });
       });
     }

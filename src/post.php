@@ -1,9 +1,10 @@
 <div class="speaker-info">
+  <a class="speaker-link-mobile" href="<?php echo get_permalink(); ?>"></a>
   <div class="speaker-image">
     <?php
     $image = get_field('speaker_image');
     if( !empty($image) ): ?>
-      <img src="<?php echo $image['url']; ?>" alt="Photo of <?php echo get_post_meta($post->ID, 'first_name', true); ?>" />
+      <a href="<?php echo get_permalink(); ?>"><img src="<?php echo $image['url']; ?>" alt="Photo of <?php echo get_post_meta($post->ID, 'first_name', true); ?>" /></a>
     <?php endif; ?>
   </div>
   <div class="speaker-items">

@@ -154,6 +154,7 @@
         max-width: 245px;
         margin: 0 auto;
       }
+      .speaker-link-mobile { display: none; }
       .speaker-tags { height: 70px; }
     }
   }
@@ -221,7 +222,8 @@
     display: inline-block;
   }
 
-  .speaker-contact-form {
+  .single-post .speaker-contact-form {
+    margin-top: 0;
     margin-left: 45px;
     width: 90%;
     .contact-title {
@@ -234,6 +236,12 @@
     }
     .input-group {
       font-size: 14px;
+    }
+    input, textarea {
+      &.inline-input {
+        display: inline;
+        width: 49%;
+      }
     }
   }
 

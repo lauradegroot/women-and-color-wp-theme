@@ -6,12 +6,26 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Women&amp;Color</title>
 <meta name="description" content="Find talented women and people of color to speak at your tech-related event in Toronto" />
+
+<meta property="og:title" content="Women and Color">
+<meta property="og:url" content="http://womenandcolor.com">
+<meta property="og:image" content="http://lauradegroot.github.io/womenandcolor/images/og-image.jpg">
+<meta name="og:description" content="Tweeting stats about speaker diversity at tech-related events in Toronto.">
+<meta name="description" content="Tweeting stats about speaker diversity at tech-related events in Toronto.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@womenandcolor">
+<meta name="twitter:creator" content="@heymosef">
+<meta name="twitter:title" content="Women and Color">
+<meta name="twitter:description" content="Tweeting stats about speaker diversity at tech-related events in Toronto.">
+<meta name="twitter:image" content="http://lauradegroot.github.io/womenandcolor/images/og-image.jpg">
+
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/images/favicon.ico" />
 <?php wp_head(); ?>
 </head>
-<body <?php body_class(); ?>>
+<?php if(is_page()) { $page_slug = 'page-'.$post->post_name; } ?>
+<body <?php body_class($page_slug); ?>>
   <div class="nav-icon">
     <span></span>
     <span></span>
@@ -66,10 +80,6 @@
             } ?>
           </div>
         </div>
-        <!-- <button id="responsive-menu-toggle"><?php _e( 'Menu', 'womenandcolor' ); ?></button>
-        <nav id="site-navigation" class="site-navigation">
-          <div id="responsive-menu"><?php wp_nav_menu( array( 'theme_location' => 'header', 'menu_id' => 'menu-header', 'menu_class' => 'menu-inline' ) ); ?></div>
-        </nav> -->
       </header>
     </div>
     <div id="wrap-main" class="wrap-main">

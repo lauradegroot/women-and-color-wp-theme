@@ -21,6 +21,7 @@ include_once "email.php";
       // display posts (all or single)
       while ( have_posts() ) : the_post(); ?>
         <article id="post-<?php the_ID(); ?>" <?php post_class(); ?> role="article">
+          <?php the_content(); ?>
           <?php require($DOCUMENT_ROOT . "post.php");?>
           <?php if ( is_single() ) { ?>
             <!-- if we're on an individual speaker page, show the contact form -->

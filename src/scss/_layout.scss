@@ -385,5 +385,16 @@ footer { text-align: center; }
     color: $dark-purple;
   }
 }
+
+.page-about {
+  .speaker-info { display: none; }
+  .current-tag-page { display: none; }
+  .content-area {
+    max-width: 650px;
+    text-align: center;
+    h1 { font-weight: 700;}
+  }
+}
+
 .bitnami-corner-image-div {display: none!important;}
 .wrap-footer { clear: both; }

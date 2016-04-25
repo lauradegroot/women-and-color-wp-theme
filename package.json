@@ -55,7 +55,7 @@
     "wp-ajax-page-loader": "^0.2.1"
   },
   "scripts": {
-    "build": "gulp build && cp src/images/favicon.ico build/images/ && cp src/images/og-image.jpg build/images/",
+    "build": "gulp build && cp src/images/favicon.ico build/images/",
     "postinstall": "gulp setup"
   }
 }

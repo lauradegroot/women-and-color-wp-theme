@@ -255,7 +255,6 @@
     }
   }
 }
-
 @include media-above(1041px) {
   .single-post .content-area {
     .speaker-info {
@@ -266,6 +265,12 @@
     .speaker-contact-form {
       margin-top: 0px;
       width: 600px;
+    }
+  }
+  .page-about {
+    .content-area {
+      max-width: 920px;
+      margin: 80px auto 60px auto;
     }
   }
 }

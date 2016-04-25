@@ -9,7 +9,7 @@
 
 <meta property="og:title" content="Women and Color">
 <meta property="og:url" content="http://womenandcolor.com">
-<meta property="og:image" content="http://lauradegroot.github.io/womenandcolor/images/og-image.jpg">
+<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/images/og-image.jpg">
 <meta name="og:description" content="Tweeting stats about speaker diversity at tech-related events in Toronto.">
 <meta name="description" content="Tweeting stats about speaker diversity at tech-related events in Toronto.">
 <meta name="twitter:card" content="summary_large_image">
@@ -17,7 +17,7 @@
 <meta name="twitter:creator" content="@heymosef">
 <meta name="twitter:title" content="Women and Color">
 <meta name="twitter:description" content="Tweeting stats about speaker diversity at tech-related events in Toronto.">
-<meta name="twitter:image" content="http://lauradegroot.github.io/womenandcolor/images/og-image.jpg">
+<meta name="twitter:image" content="<?php echo get_template_directory_uri(); ?>/images/og-image.jpg">
 
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />

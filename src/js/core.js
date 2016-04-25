@@ -5,19 +5,16 @@
 
     $('body').on('click', '.more', function() {
       var menuHeight = $('.sub-category-menu-inner').outerHeight();
+      $(this).toggleClass('closed').toggleClass('open');
       if ($(this).hasClass('closed')) {
-        $(this).removeClass('closed').addClass('open');
         $('.sub-category-menu').css('height', menuHeight);
       } else {
-        $(this).removeClass('open').addClass('closed');
         $('.sub-category-menu').css('height', 0);
       }
     }).on('click', '.nav-icon', function() {
-      var body = $('body');
-      var mobileMenu = $('.mobile-menu-tags');
       $(this).toggleClass('open');
-      mobileMenu.toggleClass('menu-open');
-      body.toggleClass('mobile-menu-open');
+      $('.mobile-menu-tags').toggleClass('menu-open');
+      $('body').toggleClass('mobile-menu-open');
     });
 
     // ajax email
@@ -32,7 +29,7 @@
           url: form.attr('action'),
           data: form.serialize(),
           complete: function(data) {
-            var res = data.responseText
+            var res = data.responseText;
             if (res === 'bail') {
               message
                 .text('Please fill out the required fields')
@@ -86,8 +83,7 @@
     }
 
     // ajax "show more"
-    var link = $(".next-page a");
-    link.on("click", function(event) {
+    $(".next-page a").on("click", function(event) {
       event.preventDefault();
       var clicked = $(this);
       var page = parseInt(clicked.parent().data("page"));

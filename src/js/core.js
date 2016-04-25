@@ -5,10 +5,11 @@
 
     $('body').on('click', '.more', function() {
       var menuHeight = $('.sub-category-menu-inner').outerHeight();
-      $(this).toggleClass('closed').toggleClass('open');
       if ($(this).hasClass('closed')) {
+        $(this).removeClass('closed').addClass('open');
         $('.sub-category-menu').css('height', menuHeight);
       } else {
+        $(this).removeClass('open').addClass('closed');
         $('.sub-category-menu').css('height', 0);
       }
     }).on('click', '.nav-icon', function() {

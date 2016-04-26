@@ -12,9 +12,13 @@
           <div class="footer-info">
             <h4>Women&Color</h4>
             <p>Tweeting stats about speaker diversity at tech-related events in&nbsp;Toronto.</p>
-            <p class="follow"><a href="http://twitter.com/womenandcolor" target="_blank">@womenandcolor</a></p>
-            <br />
-            <p><a href="/about" target="_blank">About Us</a></p>
+            <div class="footer-links">
+              <a href="/about">about us</a>
+              <span>•</span>
+              <a href="http://twitter.com/womenandcolor" target="_blank">@womenandcolor</a>
+              <span>•</span>
+              <a href="https://www.facebook.com/groups/womenandcolor/" target="_blank">facebook</a>
+            </div>
           </div>
         </footer>
       </div>

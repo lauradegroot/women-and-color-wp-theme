@@ -6,7 +6,7 @@ if($_POST):
     print_r('bail');
     exit();
   endif;
-  $to      = "womenandcolor@gmail.com"; // get_post_meta($_POST["id"], 'email', true)
+  $to      = "hello@womenandcolor.com"; // get_post_meta($_POST["id"], 'email', true)
   $subject = "Someone sent you a message from Women&Color";
   $message = "Hi " . get_post_meta($_POST["id"], 'first_name', true) . "\n\n";
   $message .= "Here’s the details of the message sent to you:\n\n";

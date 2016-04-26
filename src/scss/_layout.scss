@@ -348,6 +348,7 @@ footer { text-align: center; }
   color: #fff;
   overflow: auto;
   padding:0 30px;
+  letter-spacing: 0.5px;
   h4 {
     font-size: 24px;
     font-weight: 700;
@@ -356,13 +357,12 @@ footer { text-align: center; }
   p {
     font-size: 18px;
     font-weight: 300;
-    max-width: 300px;
+    max-width: 305px;
     margin: 0 auto;
   }
-  .follow {
-    display:inline-block;
-    margin-top: 10px;
-    font-weight: 700;
+  .footer-links {
+    margin-top: 15px;
+    font-weight: 300;
   }
 }
 

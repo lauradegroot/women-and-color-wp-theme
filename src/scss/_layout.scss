@@ -227,6 +227,8 @@ body {
 }
 .single-post {
   .site-main { border-bottom: 1px solid $light-grey; }
+  .current-tag-page { display: none; }
+  .content-area { margin-top: 60px; }
   .site-content {
     .speaker-info {
       border: none;

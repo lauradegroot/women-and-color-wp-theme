@@ -257,6 +257,7 @@
 }
 @include media-above(1041px) {
   .single-post .content-area {
+    margin-top: 20px;
     .speaker-info {
       border: 1px solid $light-purple;
       margin: 10px;

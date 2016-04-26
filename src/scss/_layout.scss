@@ -392,7 +392,11 @@ footer { text-align: center; }
   .content-area {
     max-width: 650px;
     text-align: center;
-    h1 { font-weight: 700;}
+    margin: 60px auto 10px auto;
+    h1 {
+      font-size: 25px;
+      font-weight: 700;
+    }
   }
 }
 

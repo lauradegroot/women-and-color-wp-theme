@@ -11,8 +11,10 @@
           </div>
           <div class="footer-info">
             <h4>Women&Color</h4>
-            <p>Tweeting stats about speaker diversity at tech-related events in Toronto.</p>
-            <p class="follow">Follow <a href="http://twitter.com/womenandcolor" target="_blank">@womenandcolor</a></p>
+            <p>Tweeting stats about speaker diversity at tech-related events in&nbsp;Toronto.</p>
+            <p class="follow"><a href="http://twitter.com/womenandcolor" target="_blank">@womenandcolor</a></p>
+            <br />
+            <p><a href="/about" target="_blank">About Us</a></p>
           </div>
         </footer>
       </div>

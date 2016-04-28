@@ -348,6 +348,7 @@ footer { text-align: center; }
   color: #fff;
   overflow: auto;
   padding:0 30px;
+
   letter-spacing: 0.5px;
   h4 {
     font-size: 24px;
@@ -357,11 +358,11 @@ footer { text-align: center; }
   p {
     font-size: 18px;
     font-weight: 300;
-    max-width: 305px;
+    max-width: 300px;
     margin: 0 auto;
   }
   .footer-links {
-    margin-top: 15px;
+    margin-top: 10px;
     font-weight: 300;
   }
 }

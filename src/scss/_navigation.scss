@@ -4,11 +4,13 @@
   clear: both;
   text-align: center;
   width: 100%;
+  height: 59px;
   border: 2px solid $light-purple;
   margin: 25px 0 0 0;
   border-radius: 4px;
   display: inline-block;
   background: #fff;
+  position: relative;
   @include transition(background .1s ease-in-out);
   &:hover {
     background: #E8EAF6;
@@ -19,16 +21,29 @@
     padding: 15px 0;
     width: 100%;
     display: inline-block;
+    opacity: 1;
+    @include transition(all .1s ease-in-out);
+  }
+  .loader {
+    display: none;
+    top: -6px;
+  }
+  &.loading {
+    background: #E8EAF6;
+    a { opacity: 0;}
+    .loader { display: block; }
   }
 }
 @include media-above($break-medium) {
   .nav-next {
     width: 621px;
+    height: 78px;
     margin: 20px 10px 0;
     a {
       font-size: 24px;
       padding: 20px 0;
     }
+    .loader { top: 3px; }
   }
 }
 @include media-above($break-large) {

@@ -12,6 +12,7 @@ if ( !function_exists( 'womenandcolor_post_navigation' ) ) : function womenandco
           echo $p;
         ?>" class="nav-next next-page">
         <?php next_posts_link( __( 'Show More Speakers', 'womenandcolor' ) ); ?>
+        <div class="loader"></div>
       </div>
     <?php } ?>
     </div>

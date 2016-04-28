@@ -10,13 +10,16 @@
 <meta property="og:title" content="Women and Color"/>
 <meta property="og:url" content="http://womenandcolor.com"/>
 <meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/images/og-image.jpg"/>
-<meta property="og:description" content="Find talented women and people of color to speak at your tech-related event in Toronto"/>
+<meta property="og:description" content="Find talented women and people of color to speak at your tech-related event in Toronto."/>
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:site" content="@womenandcolor"/>
 <meta name="twitter:creator" content="@heymosef"/>
 <meta name="twitter:title" content="Women and Color"/>
-<meta name="twitter:description" content="Find talented women and people of color to speak at your tech-related event in Toronto"/>
+<meta name="twitter:description" content="Find talented women and people of color to speak at your tech-related event in Toronto."/>
 <meta name="twitter:image" content="<?php echo get_template_directory_uri(); ?>/images/og-image.jpg"/>
+
+<script src="https://use.typekit.net/mnp5beq.js"></script>
+<script>try{Typekit.load({ async: true });}catch(e){}</script>
 
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
@@ -55,10 +58,10 @@
         <div class="main-category-menu">
           <div class="topics-wrap tags-wrap">
             <p class="tag-all"><a href="<?php echo esc_url( home_url( '/' ) ); ?>">All Topics</a></p>
-            <p class="tag-product-design"><a href="<?php echo esc_url( home_url( '/topic/product-design' ) ); ?>">Product Design</a></p>
-            <p class="tag-web-development"><a href="<?php echo esc_url( home_url( '/topic/web-development' ) ); ?>">Web Development</a></p>
-            <p class="tag-ios-development"><a href="<?php echo esc_url( home_url( '/topic/ios-development' ) ); ?>">iOS Development</a></p>
+            <p class="tag-business-development"><a href="<?php echo esc_url( home_url( '/topic/business-development' ) ); ?>">Business Development</a></p>
             <p class="tag-digital-marketing"><a href="<?php echo esc_url( home_url( '/topic/digital-marketing' ) ); ?>">Digital Marketing</a></p>
+            <p class="tag-entrepreneurship"><a href="<?php echo esc_url( home_url( '/topic/entrepreneurship' ) ); ?>">Entrepreneurship</a></p>
+            <p class="tag-web-development"><a href="<?php echo esc_url( home_url( '/topic/web-development' ) ); ?>">Web Development</a></p>
           </div>
           <div class="more closed">
             More
@@ -79,6 +82,15 @@
             } ?>
           </div>
         </div>
+
+      	<script>
+      	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      	  ga('create', 'UA-76994229-1', 'auto');
+      	  ga('send', 'pageview');
+      	</script>
       </header>
     </div>
     <div id="wrap-main" class="wrap-main">

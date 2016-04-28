@@ -87,13 +87,19 @@
     $(".next-page a").on("click", function(event) {
       event.preventDefault();
       var clicked = $(this);
-      var page = parseInt(clicked.parent().data("page"));
+      var page = parseInt(
+        clicked
+        .parent()
+        .addClass('loading')
+        .data("page")
+      );
       clicked.css('pointer-events', 'none');
       $.get(next(page), function(data) {
         var html = data.replace('<head/>','');
         $('.articles').append(html);
         clicked
           .parent()
+          .removeClass('loading')
           .data("page", page+1)
           .end()
           .css('pointer-events', 'auto');

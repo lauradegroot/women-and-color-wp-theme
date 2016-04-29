@@ -63,7 +63,8 @@ body {
 
 .site-header {
   background-image: url("images/background.jpg");
-  background-position: center -67px;
+  background-position: center;
+  background-size: cover;
   overflow: hidden;
 }
 .site-branding {
